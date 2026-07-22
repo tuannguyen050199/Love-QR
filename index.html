@@ -5,7 +5,29 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>For You ❤️</title>
+  <title>Trang có nhạc</title>
+</head>
+<body>
 
+    <h1>Xin chào!</h1>
+    <p>Đây là trang HTML có nhạc.</p>
+
+    <audio controls>
+        <source src="music.mp3" type="audio/mpeg">
+        Trình duyệt của bạn không hỗ trợ phát âm thanh.
+    </audio>
+<audio id="bgm" loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+window.addEventListener("click", () => {
+    document.getElementById("bgm").play();
+}, { once: true });
+</script>
+
+
+  
 <style>
 
 *{
