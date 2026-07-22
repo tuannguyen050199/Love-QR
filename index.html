@@ -5,6 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>For You ❤️</title>
+  <audio id="player" controls></audio>
+
+<script>
+const dsNhac = [
+    "8069275555952.mp4",
+    "8069275803404.mp4"
+];
+
+let i = 0;
+const player = document.getElementById("player");
+
+player.src = dsNhac[0];
+
+player.addEventListener("ended", function () {
+    i++;
+    if (i < dsNhac.length) {
+        player.src = dsNhac[i];
+        player.play();
+    }
+});
+</script>
   <img src="anh.jpg" alt="Ảnh của tôi">
 </head>
 <body>
