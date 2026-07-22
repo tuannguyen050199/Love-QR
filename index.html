@@ -20,6 +20,42 @@
         }
 
         /* DÁN TOÀN BỘ CSS CÒN LẠI CỦA BẠN VÀO ĐÂY */
+        .photo{
+    position:absolute;
+    width:120px;
+    height:120px;
+    object-fit:cover;
+    border-radius:15px;
+    box-shadow:0 0 20px hotpink;
+    animation:photoFly 10s linear infinite;
+}
+
+@keyframes photoFly{
+    0%{
+        transform:translateY(110vh) scale(0.5) rotate(0deg);
+        opacity:0;
+    }
+
+    20%{
+        transform:translateY(70vh) scale(1);
+        opacity:1;
+    }
+
+    50%{
+        transform:translateY(20vh) scale(1.4) rotate(180deg);
+        opacity:1;
+    }
+
+    80%{
+        transform:translateY(-40vh) scale(0.8);
+        opacity:1;
+    }
+
+    100%{
+        transform:translateY(-120vh) scale(0.3) rotate(360deg);
+        opacity:0;
+    }
+}
     </style>
 </head>
 
@@ -54,28 +90,32 @@ player.addEventListener("ended", function () {
 window.addEventListener("click", function () {
     player.play();
 }, { once: true });
-</script>
-<script>
-const images = [
+
+    
+    const photos = [
     "anh.jpg",
     "anh1.jpg",
     "anh2.jpg",
     "anh3.jpg"
 ];
 
-for(let i = 0; i < 30; i++){
+for(let i = 0; i < 20; i++){
 
-    let img = document.createElement("img");
+    let img = document.createElement("anh");
 
-    img.src = images[Math.floor(Math.random() * images.length)];
+    img.src = photos[Math.floor(Math.random() * photos.length)];
 
-    img.style.position = "absolute";
+    img.className = "photo";
+
     img.style.left = Math.random() * 100 + "vw";
-    img.style.top = Math.random() * 100 + "vh";
-    img.style.width = "120px";
+    img.style.animationDuration = (8 + Math.random() * 8) + "s";
+    img.style.animationDelay = Math.random() * 5 + "s";
 
     document.body.appendChild(img);
 }
+</script>
+<script>
+
 </script>
     <!-- Nội dung -->
     <div class="center">
