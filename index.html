@@ -25,12 +25,35 @@
 
 <body>
 
-    <!-- Nhạc -->
-    <audio id="bgm" loop>
-        
-    <source src="8070934482568.mp4" type="audio/mp4">
-        Trình duyệt của bạn không hỗ trợ âm thanh.
-    </audio>
+    <audio id="player" controls></audio>
+
+<script>
+const playlist = [
+    "8069275555952.mp3",
+    "8070934482568.mp3"
+];
+
+let current = 0;
+const player = document.getElementById("player");
+
+// Phát bài đầu tiên
+player.src = playlist[current];
+
+// Khi bài hát kết thúc
+player.addEventListener("ended", function () {
+    current++;
+
+    if (current < playlist.length) {
+        player.src = playlist[current];
+        player.play();
+    }
+});
+
+// Phát sau khi người dùng click lần đầu
+window.addEventListener("click", function () {
+    player.play();
+}, { once: true });
+</script>
 
     <!-- Nội dung -->
     <div class="center">
