@@ -1,22 +1,55 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For You ❤️</title>
 
-<title>For You ❤️</title>
- </style>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+
+        body{
+            overflow:hidden;
+            height:100vh;
+            background:radial-gradient(circle,#10142b,#000);
+            font-family:Arial,Helvetica,sans-serif;
+        }
+
+        /* DÁN TOÀN BỘ CSS CÒN LẠI CỦA BẠN VÀO ĐÂY */
+    </style>
 </head>
 
 <body>
 
-<audio id="bgm" loop>
-    <source src="8069275555952.mp4" type="audio/mp4">
-</audio>
+    <!-- Nhạc -->
+    <audio id="bgm" loop>
+        <source src="8069275555952.mp4" type="audio/mp4">
+        Trình duyệt của bạn không hỗ trợ âm thanh.
+    </audio>
 
+    <!-- Nội dung -->
+    <div class="center">
+        <h1>Chúc em ngày mới tốt lành ❤️</h1>
+        <h1>CẨM LY ❤️</h1>
+        <p>Anh sẽ luôn ở đây và yêu em nhiều hơn mỗi ngày.</p>
+    </div>
 
-</div>style>
+    <script>
+        // Phát nhạc khi người dùng bấm chuột lần đầu
+        window.addEventListener("click", function () {
+            const bgm = document.getElementById("bgm");
+            bgm.play().catch(err => console.log(err));
+        }, { once: true });
 
+        // DÁN TOÀN BỘ JAVASCRIPT TẠO TIM, SAO, CHỮ BAY CỦA BẠN XUỐNG DƯỚI
+    </script>
+
+</body>
+</html>
 *{
 margin:0;
 padding:0;
