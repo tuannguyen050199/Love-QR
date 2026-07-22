@@ -15,6 +15,32 @@ document.addEventListener("click", function () {
 }, { once: true });
 </script>
   <img src="anh.jpg" alt="Ảnh của tôi">
+ img{
+    width:180px;
+    position:relative;
+    animation: move 3s infinite alternate;
+    margin:10px;
+}
+
+@keyframes move{
+    from{
+        left:0;
+    }
+    to{
+        left:200px;
+    }
+}
+</style>
+</head>
+<body>
+
+<img src="anh.jpg">
+<img src="anh.jpg">
+<img src="anh.jpg">
+<img src="anh.jpg">
+
+</body>
+</html>
 </head>
 <body>
 
