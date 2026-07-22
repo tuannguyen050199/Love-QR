@@ -5,21 +5,23 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>For You ❤️</title>
-  <title>Trang có nhạc</title>
   <img src="anh.jpg" alt="Ảnh của tôi">
 </head>
 <body>
-<audio id="player" controls autoplay>
-    <source src=="8069275555952.mp4" type="audio/mp4">
-</audio>
+<audio id="player" controls></audio>
 
 <script>
-const dsNhac = ["8069275555952.mp4", "8069275803404.mp4"];
-let i = 0;
+const dsNhac = [
+    "8069275555952.mp4",
+    "8069275803404.mp4"
+];
 
+let i = 0;
 const player = document.getElementById("player");
 
-player.addEventListener("ended", () => {
+player.src = dsNhac[0];
+
+player.addEventListener("ended", function () {
     i++;
     if (i < dsNhac.length) {
         player.src = dsNhac[i];
